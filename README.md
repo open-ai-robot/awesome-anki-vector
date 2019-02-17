@@ -40,20 +40,22 @@ Well, let's see how to do it.
 
 ### How it works
 1. Connect to Vector with `enable_camera_feed=True`, because we need the [anki_vector.camera](https://developer.anki.com/vector/docs/generated/anki_vector.camera.html) API.
-```
+```python
 robot = anki_vector.Robot(anki_vector.util.parse_command_args().serial, enable_camera_feed=True)
 ```
 
 2. We'll need to show what Vector see in it's screen.
 
-```
+```python
 def show_camera():
     print('Show camera')
     robot.camera.init_camera_feed()
     robot.vision.enable_display_camera_feed_on_face(True)
 ```
+
 and close the camera after the detection.
-```    
+
+```python    
 def close_camera():
     print('Close camera')
     robot.vision.enable_display_camera_feed_on_face(False)
@@ -61,14 +63,14 @@ def close_camera():
 ```
 3. We'll save take a photo from Vector's camera and save it later for post to Google Vision.
 
-```
+```python
 def save_image(file_name):
     print('Save image')
     robot.camera.latest_image.save(file_name, 'JPEG')
 ```
 4. We post the image to Google Vision and parse the result as text for Vector.
 
-```
+```python
 def detect_labels(path):
     print('Detect labels, image = {}'.format(path))
     # Instantiates a client
@@ -94,16 +96,16 @@ def detect_labels(path):
     print('Labels: {}'.format(labels))
     return ', or '.join(res_list)
 ```
-5. Then we send the text to Vector and make it to say the result.
+5. Then we send the text to Vector and make it say the result.
 
-```
+```python
 def robot_say(text):
     print('Say {}'.format(text))
     robot.say_text(text)
 ```
-6. Finally we link all the steps together.
+6. Finally, we put all the steps together.
 
-```
+```python
 def analyze():
     stand_by()
     show_camera()
@@ -131,9 +133,9 @@ def analyze():
     robot_say('Over, goodbye!')
 
 ```
-7. We want Vector randomly active the detetion action, so we wait for a random time from 30 seconds to 5 minites.
+1. We want Vector randomly active the detetion action, so we wait for a random time (about 30 seconds to 5 minites) for next detection.
 
-```
+```python
 def main():
     while True:
         connect_robot()
@@ -148,7 +150,7 @@ def main():
 
 8. When Vector success to active the detection action, you should see logs:
 
-```log
+```shell
 2019-02-17 21:55:42,113 anki_vector.robot.Robot WARNING  No serial number provided. Automatically selecting 009050ae
 Connect to Vector...
 2019-02-17 21:55:42,116 anki_vector.connection.Connection INFO     Connecting to 192.168.1.230:443 for Vector-M2K2 using /Users/gaolu.li/.anki_vector/Vector-M2K2-009050ae.cert
@@ -188,4 +190,6 @@ Say Over, goodbye!
 Vector disconnected
 
 ```
+
+You can find the latest photo that Vector use to detetion in `resources/latest.jpg`.
 
