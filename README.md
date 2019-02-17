@@ -8,7 +8,7 @@ Well, I bought this little guy at 10 Feb 2019, if you want a robot pet, and you 
 I build this project to share my codes and docs.
 
 # Object detection with Vector
-This program is to enable Vector to detect objects with it's camera, and tell us what it found. 
+This program is to enable Vector to detect objects with its camera, and tell us what it found. 
 
 We take a photo from Vector's camera, then post to Google Vision Service, then Google Vision Service returns the object detection result, 
 finally, we turn all the label text into a sentence and send to Vector so that Vector can say it out loud.
@@ -36,7 +36,7 @@ Well, let's see how to do it.
 3. Clone this project to local. It requires Python 3.6+.
 4. Don forget to set Google Vision environment variable GOOGLE_APPLICATION_CREDENTIALS to the file path of the JSON file that contains your service account key.  e.g. `export GOOGLE_APPLICATION_CREDENTIALS="/Workspace/Vector-vision-62d48ad8da6e.json"`
 5. Make sure your computer and Vector in the same WiFi network. Then run `python3 object_detection.py`.
-6. If you lucky, Vector will start the first object detection, it will say "My lord, I found something interesting. Give me 5 seconds."
+6. If you are lucky, Vector will start the first object detection, it will say "My lord, I found something interesting. Give me 5 seconds."
 
 ### How it works
 1. Connect to Vector with `enable_camera_feed=True`, because we need the [anki_vector.camera](https://developer.anki.com/vector/docs/generated/anki_vector.camera.html) API.
