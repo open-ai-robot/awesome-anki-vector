@@ -101,6 +101,11 @@ def close_camera():
     robot.camera.close_camera_feed()
 
 
+def save_image(file_name):
+    print('Save image')
+    robot.camera.latest_image.save(file_name, 'JPEG')
+
+
 def show_image(file_name):
     print('Show image = {}'.format(file_name))
 
@@ -112,10 +117,6 @@ def show_image(file_name):
     screen_data = anki_vector.screen.convert_image_to_screen_data(image.resize(screen_dimensions))
     robot.screen.set_screen_with_image_data(screen_data, 5.0, True)
 
-
-def save_image(file_name):
-    print('Save image')
-    robot.camera.latest_image.save(file_name, 'JPEG')
 
 def robot_say(text):
     print('Say {}'.format(text))
@@ -153,7 +154,7 @@ def analyze():
     '''
 
     close_camera()
-    robot_say('Goodbye')
+    robot_say('Over, goodbye!')
 
 
 def main():
