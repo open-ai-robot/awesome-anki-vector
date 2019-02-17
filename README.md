@@ -10,8 +10,8 @@ I build this project to share my codes and docs.
 ## Object detection with Vector
 This program is to enable Vector to detect objects with it's camera, and tell us what it found.
 
-### Install requirements
+### 1. Install requirements
 
-### How it works
+### 2. How it works
 
-### Run the code yourself
+### 3. Run the code yourself
