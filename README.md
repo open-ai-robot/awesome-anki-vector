@@ -133,7 +133,7 @@ def analyze():
     robot_say('Over, goodbye!')
 
 ```
-1. We want Vector randomly active the detetion action, so we wait for a random time (about 30 seconds to 5 minites) for next detection.
+7. We want Vector randomly active the detetion action, so we wait for a random time (about 30 seconds to 5 minites) for next detection.
 
 ```python
 def main():
