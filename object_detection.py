@@ -47,7 +47,7 @@ def detect_labels(path):
     for label in labels:
         if label.score > 0.5:
             res_list.append(label.description)
-    
+
     print('Labels: {}'.format(labels))
     return ', or '.join(res_list)
 
@@ -62,14 +62,14 @@ def localize_objects(path):
 
     objects = client.object_localization(image=image).localized_object_annotations
 
-    res_list = []    
+    res_list = []
     print('Number of objects found: {}'.format(len(objects)))
     for object_ in objects:
         print('\n{} (confidence: {})'.format(object_.name, object_.score))
         print('Normalized bounding polygon vertices: ')
         res_list.append(object_.name)
         for vertex in object_.bounding_poly.normalized_vertices:
-            print(' - ({}, {})'.format(vertex.x, vertex.y))    
+            print(' - ({}, {})'.format(vertex.x, vertex.y))
 
     return ', and '.join(res_list)
 
@@ -139,7 +139,7 @@ def analyze():
     save_image(image_file)
     show_image(image_file)
     time.sleep(1)
-    
+
     robot_say('Start to analyze the object')
     text = detect_labels(image_file)
     show_image(image_file)
