@@ -7,7 +7,7 @@ Well, I bought this little guy at 10 Feb 2019, if you want a robot pet, and you 
 
 I build this project to share my codes and docs.
 
-## Object detection with Vector
+# Object detection with Vector
 This program is to enable Vector to detect objects with it's camera, and tell us what it found. 
 
 Here is some demo videos:
