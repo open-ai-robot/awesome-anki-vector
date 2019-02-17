@@ -31,12 +31,12 @@ Here are some demo videos:
 Well, let's see how to do it.
 
 ### Run the code yourself
-1. Install [Vector Python SDK](https://developer.anki.com/vector/docs/install-macos.html). You can test the SDK by run any of the example from [anki/vector-python-sdk/examples/tutorials/](https://github.com/anki/vector-python-sdk/tree/master/examples/tutorials) 
-2. Set up you Google Vision account. Then follow the [Quickstart](https://cloud.google.com/vision/docs/quickstart-client-libraries) to test the API.
+1. Install [Vector Python SDK](https://developer.anki.com/vector/docs/install-macos.html). You can test the SDK by running any of the example from [anki/vector-python-sdk/examples/tutorials/](https://github.com/anki/vector-python-sdk/tree/master/examples/tutorials) 
+2. Set up your Google Vision account. Then follow the [Quickstart](https://cloud.google.com/vision/docs/quickstart-client-libraries) to test the API.
 3. Clone this project to local. It requires Python 3.6+.
 4. Don forget to set Google Vision environment variable GOOGLE_APPLICATION_CREDENTIALS to the file path of the JSON file that contains your service account key.  e.g. `export GOOGLE_APPLICATION_CREDENTIALS="/Workspace/Vector-vision-62d48ad8da6e.json"`
-5. Make sure you computer and Vector in a same WiFi network. Then run `python3 object_detection.py`.
-6. If it success, Vector will start the first object detection, it will say "My lord, I found something interesting. Give me 5 seconds."
+5. Make sure your computer and Vector in the same WiFi network. Then run `python3 object_detection.py`.
+6. If you lucky, Vector will start the first object detection, it will say "My lord, I found something interesting. Give me 5 seconds."
 
 ### How it works
 1. Connect to Vector with `enable_camera_feed=True`, because we need the [anki_vector.camera](https://developer.anki.com/vector/docs/generated/anki_vector.camera.html) API.
@@ -44,7 +44,7 @@ Well, let's see how to do it.
 robot = anki_vector.Robot(anki_vector.util.parse_command_args().serial, enable_camera_feed=True)
 ```
 
-2. We'll need to show what Vector see in it's screen.
+2. We'll need to show what Vector see on its screen.
 
 ```python
 def show_camera():
@@ -61,14 +61,14 @@ def close_camera():
     robot.vision.enable_display_camera_feed_on_face(False)
     robot.camera.close_camera_feed()
 ```
-3. We'll save take a photo from Vector's camera and save it later for post to Google Vision.
+3. We'll save take a photo from Vector's camera and save it later to send to Google Vision.
 
 ```python
 def save_image(file_name):
     print('Save image')
     robot.camera.latest_image.save(file_name, 'JPEG')
 ```
-4. We post the image to Google Vision and parse the result as text for Vector.
+4. We post the image to Google Vision and parse the result as a text for Vector.
 
 ```python
 def detect_labels(path):
@@ -133,7 +133,7 @@ def analyze():
     robot_say('Over, goodbye!')
 
 ```
-7. We want Vector randomly active the detetion action, so we wait for a random time (about 30 seconds to 5 minites) for next detection.
+7. We want Vector randomly active the detection action, so we wait for a random time (about 30 seconds to 5 minutes) for the next detection.
 
 ```python
 def main():
@@ -191,5 +191,5 @@ Vector disconnected
 
 ```
 
-You can find the latest photo that Vector use to detetion in `resources/latest.jpg`.
+You can find the latest photo that Vector uses to detention in `resources/latest.jpg`.
 
