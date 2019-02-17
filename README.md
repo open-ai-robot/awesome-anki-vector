@@ -10,7 +10,7 @@ I build this project to share my codes and docs.
 # Object detection with Vector
 This program is to enable Vector to detect objects with it's camera, and tell us what it found. 
 
-Here is some demo videos:
+Here are some demo videos:
 
 1. Vector detected a watch on my desk.
 
@@ -25,6 +25,7 @@ Here is some demo videos:
 [![image3](https://user-images.githubusercontent.com/799578/52912537-9df18580-32ed-11e9-8ee5-a1b3db52298a.png)
 ](https://youtu.be/fzhcvPQBTBY)
 
+Well, let's see how to do it.
 ### 1. Install requirements
 
 ### 2. How it works
