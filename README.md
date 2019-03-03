@@ -28,6 +28,9 @@ Here are some demo videos:
 [![image3](https://user-images.githubusercontent.com/799578/52912537-9df18580-32ed-11e9-8ee5-a1b3db52298a.png)
 ](https://youtu.be/fzhcvPQBTBY)
 
+4. Vector was exploring on my desk as usual and randomly tell me what it found. 
+[![image4](https://user-images.githubusercontent.com/799578/53691347-e5304980-3db6-11e9-8393-78ddd1233295.png)](https://youtu.be/7zd7-YOIkvc)
+
 Well, let's see how to do it.
 
 ### Run the code yourself
