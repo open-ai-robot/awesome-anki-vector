@@ -210,8 +210,9 @@ You can find the latest photo that Vector uses to detention in `resources/latest
 # Shoes placed
 This program is to enable Vector to place shoes for us. Vector will place our shoes when we're not at home, so we can leave home without worry about the shoes, especially when we're in a hurry.
 
-This program is in research, any help is welcome.
+This program is in research. I'll share the plan, the design, the docs, the codes here. I highly recommand you make an issue on GitHub so we can talk about it further if you're interesting, any help is welcome!
 
 Here is a draft demo video I made to give you guys a sense of the program:
+[![image](https://user-images.githubusercontent.com/799578/54484263-bbd6e980-489d-11e9-97a5-aa6eaafe8b80.png)](https://youtu.be/Wj_TB6Mr8qA)
 
 
