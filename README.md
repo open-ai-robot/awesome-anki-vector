@@ -1,5 +1,13 @@
 <img src="https://user-images.githubusercontent.com/799578/52912304-8c5aae80-32ea-11e9-8a04-b92ca50a7cb7.jpg" width="480"/>
 
+# Table of contents
+- [Table of contents](#table-of-contents)
+- [Anki Vector AI++](#anki-vector-ai)
+- [Object detection](#object-detection)
+    - [Run the code yourself](#run-the-code-yourself)
+    - [How it works](#how-it-works)
+- [Shoes placed](#shoes-placed)
+
 # Anki Vector AI++
 [Anki Vector](https://www.anki.com/en-us/vector) - The Home Robot With Interactive AI Technology.
 
@@ -7,14 +15,6 @@ Well, I bought this little guy at 10 Feb 2019, if you want a robot pet, and you 
 
 I build this project to share my codes and docs.
 
-
-# Table of contents
-- [Anki Vector AI++](#anki-vector-ai)
-- [Table of contents](#table-of-contents)
-- [Object detection](#object-detection)
-    - [Run the code yourself](#run-the-code-yourself)
-    - [How it works](#how-it-works)
-- [Shoes placed](#shoes-placed)
 
 # Object detection
 This program is to enable Vector to detect objects with its camera, and tell us what it found. 
@@ -210,7 +210,7 @@ You can find the latest photo that Vector uses to detention in `resources/latest
 # Shoes placed
 This program is to enable Vector to place shoes for us. Vector will place our shoes when we're not at home, so we can leave home without worry about the shoes, especially when we're in a hurry.
 
-This program is in research. I'll share the plan, the design, the docs, the codes here. I highly recommand you make an issue on GitHub so we can talk about it further if you're interesting, any help is welcome!
+This program is in research. I'll share the plan, the design, the docs, the codes here. I highly recommend you make an issue on GitHub so we can talk about it further if you're interesting, any help is welcome!
 
 Here is a draft demo video I made to give you guys a sense of the program:
 
