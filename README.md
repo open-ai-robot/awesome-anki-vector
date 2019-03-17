@@ -214,6 +214,9 @@ This program is in research. I'll share the plan, the design, the docs, the code
 
 The design proposal is in this Google doc. https://docs.google.com/document/d/10TQEdbIdcvCW8gNAUvVVSe1YxzFxsQExP_X33M3_Aos/edit?usp=sharing
 
+![image](https://user-images.githubusercontent.com/799578/54486068-ce611b00-48bd-11e9-810e-f278f285005e.png)
+
+
 Here is a draft demo video I made to give you guys a sense of the program:
 
 [![image](https://user-images.githubusercontent.com/799578/54484263-bbd6e980-489d-11e9-97a5-aa6eaafe8b80.png)](https://youtu.be/Wj_TB6Mr8qA)
