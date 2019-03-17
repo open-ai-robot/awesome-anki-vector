@@ -7,7 +7,16 @@ Well, I bought this little guy at 10 Feb 2019, if you want a robot pet, and you 
 
 I build this project to share my codes and docs.
 
-# Object detection with Vector
+
+# Table of contents
+- [Anki Vector AI++](#anki-vector-ai)
+- [Table of contents](#table-of-contents)
+- [Object detection](#object-detection)
+    - [Run the code yourself](#run-the-code-yourself)
+    - [How it works](#how-it-works)
+- [Shoes placed](#shoes-placed)
+
+# Object detection
 This program is to enable Vector to detect objects with its camera, and tell us what it found. 
 
 We take a photo from Vector's camera, then post to Google Vision Service, then Google Vision Service returns the object detection result, 
@@ -196,4 +205,13 @@ Vector disconnected
 ```
 
 You can find the latest photo that Vector uses to detention in `resources/latest.jpg`.
+
+
+# Shoes placed
+This program is to enable Vector to place shoes for us. Vector will place our shoes when we're not at home, so we can leave home without worry about the shoes, especially when we're in a hurry.
+
+This program is in research, any help is welcome.
+
+Here is a draft demo video I made to give you guys a sense of the program:
+
 
