@@ -20,8 +20,9 @@ from google.cloud.vision import types
 # Imports the Anki Vector SDK
 import anki_vector
 from anki_vector.util import degrees
+import anki_vector.camera
 
-robot = anki_vector.Robot(anki_vector.util.parse_command_args().serial, enable_camera_feed=True)
+robot = anki_vector.Robot(anki_vector.util.parse_command_args().serial)#, enable_camera_feed=True)
 screen_dimensions = anki_vector.screen.SCREEN_WIDTH, anki_vector.screen.SCREEN_HEIGHT
 current_directory = os.path.dirname(os.path.realpath(__file__))
 image_file = os.path.join(current_directory, 'resources', "latest.jpg")
@@ -103,8 +104,7 @@ def close_camera():
 
 def save_image(file_name):
     print('Save image')
-    robot.camera.latest_image.save(file_name, 'JPEG')
-
+    image = robot.camera.latest_image.raw_image.save(file_name, 'JPEG')
 
 def show_image(file_name):
     print('Show image = {}'.format(file_name))
@@ -120,13 +120,13 @@ def show_image(file_name):
 
 def robot_say(text):
     print('Say {}'.format(text))
-    robot.say_text(text)
+    robot.behavior.say_text(text)
 
 
 def analyze():
     stand_by()
     show_camera()
-    robot_say('My lord, I found something interesting. Give me 5 seconds.')
+    robot_say('Wall-E, I found something interesting. Give me 5 seconds.')
     time.sleep(5)
 
     robot_say('Prepare to take a photo')
