@@ -126,7 +126,7 @@ def robot_say(text):
 def analyze():
     stand_by()
     show_camera()
-    robot_say('Wall-E, I found something interesting. Give me 5 seconds.')
+    robot_say('My lord, I found something interesting. Give me 5 seconds.')
     time.sleep(5)
 
     robot_say('Prepare to take a photo')
